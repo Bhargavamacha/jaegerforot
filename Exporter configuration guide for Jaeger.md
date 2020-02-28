@@ -56,7 +56,7 @@ If you are using Docker, simply use this command:</p>
       <span class="token string">'message'</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span>
        <span class="token string">'args'</span><span class="token punctuation">:</span> any<span class="token punctuation">,</span>
      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-   <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">//default: {}</span>
  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="initialize-the-exporter">Initialize the exporter</h4>
