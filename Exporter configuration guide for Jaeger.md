@@ -3,7 +3,7 @@
 
 ---
 
-<h2 id="exporter-configuration-guide-for-jaeger">Exporter configuration guide for Jaeger</h2>
+<h1 id="exporter-configuration-guide-for-jaeger">Exporter configuration guide for Jaeger</h1>
 <h3 id="installing-jaeger-locally">Installing Jaeger locally</h3>
 <p>Download the Jaeger components: <a href="https://www.jaegertracing.io/download/">https://www.jaegertracing.io/download/</a>(Downloading the docker images should be the better option, (macOS binary wasn’t available (link is broken) when this document was being written))<br>
 Commands for installing the docker image:</p>
