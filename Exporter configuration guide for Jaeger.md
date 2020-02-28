@@ -31,21 +31,13 @@ If you are using Docker, simply use this command:</p>
 <h4 id="declare-the-config-options">Declare the config options</h4>
 <pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
     serviceName<span class="token punctuation">:</span> string<span class="token punctuation">,</span> <span class="token comment">//example:'basic-service'</span>
-
     tags<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">//optional</span>
-
     host<span class="token punctuation">:</span> string<span class="token punctuation">,</span> <span class="token comment">//default:'localhost'</span>
-
     port<span class="token punctuation">:</span> number<span class="token punctuation">,</span> <span class="token comment">//default: 6832</span>
-
     maxPacketSize<span class="token punctuation">:</span> number<span class="token punctuation">,</span> <span class="token comment">// default: 65000</span>
-
     <span class="token comment">// Force a flush on shutdown </span>
-
     forceFlush<span class="token punctuation">:</span> boolean<span class="token punctuation">;</span> <span class="token comment">// default: true</span>
-
     <span class="token comment">//Time to wait for an onShutdown flush to finish before closing the sender</span>
-
     flushTimeout<span class="token punctuation">:</span> number<span class="token punctuation">,</span> <span class="token comment">// default: 2000</span>
     logger<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         error<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -65,7 +57,6 @@ If you are using Docker, simply use this command:</p>
             <span class="token operator">...</span>args<span class="token punctuation">:</span> any
         <span class="token punctuation">}</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">//default:''</span>
-
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="initialize-the-exporter">Initialize the exporter</h4>
