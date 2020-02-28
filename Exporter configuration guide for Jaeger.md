@@ -39,6 +39,24 @@ If you are using Docker, simply use this command:</p>
   forceFlush<span class="token punctuation">:</span> boolean<span class="token punctuation">;</span> <span class="token comment">// default: true</span>
   <span class="token comment">//Time to wait for an onShutdown flush to finish before closing the sender</span>
   flushTimeout<span class="token punctuation">:</span> number<span class="token punctuation">,</span> <span class="token comment">// default: 2000</span>
+  logger<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'error'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">'message'</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+       <span class="token string">'args'</span><span class="token punctuation">:</span> any<span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'warn'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">'message'</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+       <span class="token string">'args'</span><span class="token punctuation">:</span> any<span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'info'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">'message'</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+       <span class="token string">'args'</span><span class="token punctuation">:</span> any<span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'debug'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">'message'</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+       <span class="token string">'args'</span><span class="token punctuation">:</span> any<span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token punctuation">}</span>
  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="initialize-the-exporter">Initialize the exporter</h4>
