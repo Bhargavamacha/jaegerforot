@@ -30,7 +30,12 @@ If you are using Docker, simply use this command:</p>
 </code></pre>
 <h4 id="declare-the-config-options">Declare the config options</h4>
 <pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">const</span>  options <span class="token operator">=</span> <span class="token punctuation">{</span>
-logger<span class="token operator">?</span><span class="token punctuation">:</span> types<span class="token punctuation">.</span>Logger<span class="token punctuation">;</span>
+logger <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+error<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">'message'</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">:</span> any<span class="token punctuation">}</span> <span class="token punctuation">;</span>
+warn<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'message'</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">:</span> any<span class="token punctuation">}</span><span class="token punctuation">;</span>
+info<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'message'</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">:</span> any<span class="token punctuation">}</span><span class="token punctuation">;</span>
+debug<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'message'</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">:</span> any<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">//default:''</span>
 serviceName<span class="token punctuation">:</span> string<span class="token punctuation">,</span> <span class="token comment">//example:'basic-service'</span>
 tags<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">//optional</span>
 host <span class="token punctuation">:</span> string<span class="token punctuation">,</span> <span class="token comment">//default:'localhost'</span>
@@ -45,4 +50,12 @@ flushTimeout<span class="token punctuation">:</span> number<span class="token pu
 <h4 id="initialize-the-exporter">Initialize the exporter</h4>
 <pre class=" language-javascript"><code class="prism  language-javascript">exporter <span class="token operator">=</span> <span class="token keyword">new</span>  <span class="token class-name">JaegerExporter</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<p>export  type  LogFunction = (message: string, …args: unknown[]) =&gt;  void;</p>
+<p>/** Defines a logger interface. */</p>
+<p>export  interface  Logger {</p>
+<p>error: LogFunction;</p>
+<p>warn: LogFunction;</p>
+<p>info: LogFunction;</p>
+<p>debug: LogFunction;</p>
+<p>}</p>
 
