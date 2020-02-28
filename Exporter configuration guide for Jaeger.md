@@ -39,7 +39,7 @@ If you are using Docker, simply use this command:</p>
 	forceFlush<span class="token punctuation">:</span> boolean<span class="token punctuation">;</span> <span class="token comment">// default: true</span>
 	<span class="token comment">//Time to wait for an onShutdown flush to finish before closing the sender</span>
 	flushTimeout<span class="token punctuation">:</span> number<span class="token punctuation">,</span> <span class="token comment">// default: 2000</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="initialize-the-exporter">Initialize the exporter</h4>
 <pre class=" language-javascript"><code class="prism  language-javascript">exporter <span class="token operator">=</span> <span class="token keyword">new</span>  <span class="token class-name">JaegerExporter</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
